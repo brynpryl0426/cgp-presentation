@@ -15,11 +15,36 @@ vertices = [(1,1,1),(-1,1,1),(-1,-1,1),
             (1,1,1),(-1,-1,1),(1,-1,1)]
 texture = [(0,0),(0,1),(1,1),(0,0),(1,1),(1,0)]
 
+#1
+a = (1,1,1)
+b = (-1,1,1)
+c = (-1,-1,1)
+d = (1,-1,1)
+
 def draw_square():
     glBegin(GL_TRIANGLES)
-    for i, tri in enumerate(vertices):
-        glTexCoord2f(texture[i][0], texture[i][1])
-        glVertex3fv(tri)
+    #1
+    # glTexCoord2f(0,0)
+    # glVertex3fv(c)
+    # glTexCoord2f(0,1)
+    # glVertex3fv(b)
+    # glTexCoord2f(1,1)
+    # glVertex3fv(a)
+
+    # glTexCoord2f(0,0)
+    # glVertex3fv(c)
+    # glTexCoord2f(1,1)
+    # glVertex3fv(a)
+    # glTexCoord2f(1,0)
+    # glVertex3fv(d)
+    #2
+    # for i in range(6):
+    #     glTexCoord2f(texture[i][0], texture[i][1])
+    #     glVertex3fv(vertices[i])
+    #3
+    # for i, tri in enumerate(vertices):
+    #     glTexCoord2f(texture[i][0], texture[i][1])
+    #     glVertex3fv(tri)
     glEnd()
 # draw_cube
 while True:
